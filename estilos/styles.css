@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+
+/* font-family: 'Roboto Slab', serif; */
+/* reseteo */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    box-sizing: border-box;
+}
+
+
+/* Composición del header en todos los html */
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ECF4D6;
+    padding: 20px;  
+    font-size: 26px;
+    font-weight: bolder;
+    height: 15vh;
+    
+}
+
+
+header nav ul{
+    list-style: none;
+    gap: 5px;
+}
+
+/* body */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* logo */
+
+.logo{
+    border-radius: 5% 5% 5% 5%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* composición del menú en todos los html*/
+
+
+.menu ul li{
+    display: inline-block;
+    text-indent: 10px;
+    margin-top: 15px;    
+    margin-right: 20px;
+
+}
+
+.menu a{
+    text-decoration: none;
+    color: #265073;
+}
+
+.menu a:hover{
+    color: #7895CB;
+}
+
+/* composición del main en todos los html */
+
+main{    
+    display: grid;
+    height: 70vh;
+    opacity: .95;
+    background-size: cover;
+    background-position-x: 30%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    background-color: #9AD0C2;
+}
+
+main h1 {
+    text-align: center;
+}
+
+/* Galería de productos*/
+
+main .galeria-img{
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+/* Descripción de productos*/
+
+main .texto-cards{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+main .texto-cards p{
+
+    font-size: 20;
+    text-align: center;
+
+}
+
+/* Divisor para limitar el ancho del texto  */
+
+main .texto-cards div{
+
+    width: 200px;
+
+}
+
+/* cards y divisores */
+
+main .galeria-img .producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #265073;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 3px 3px 3px grey;
+    color: whitesmoke;
+    margin-bottom: 30px;
+}
+
+
+main .galeria-img .producto .boton{
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 3px 5px 5px black;
+    color: black;
+}
+
+
+/* contenedor form contactos 
+voy a hacer un nuevo contenedor para */
+
+
+
+/* pie de pagina en todos los html */
+
+footer {
+    height: 15vh;
+    color: #FFFF;
+    font-size: 25px;
+    background-color: #265073;
+    text-align: center;
+}
+
+/* estilos de main, debo unificarlos*/
+
+
+div .fondo{
+    width: 100%;
+    height: 70vh;
+}
+
+img{
+    width: 100%;
+    height: 30vh;
+    object-fit: center;
+}
+
+
+/* mQ */
+
+@media screen and (max-width: 768px){
+
+    .fondo {
+        background-image: url('../img/mini-bg.webp');
+    }
+    
+    .container-fluid {
+        padding: 10px;
+    }
+
+    .galeria-img {
+        flex-direction: column;
+    }
+    main.container-fluid {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    main {
+        height: 100%;
+    }
+    
+    .galeria-img {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch; /* Ajusta el ancho de los elementos a la anchura del contenedor principal */
+    }
+
+    .navbar-toggler {
+        display: block;
+        z-index: 1;
+    }
+    
+    .navbar-collapse {
+        display: none;
+    }
+    
+    .navbar-collapse.show {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 75%;
+        position: absolute;
+        top: 15vh;
+        left: 0;
+        right: 0;
+        background-color: #ECF4D6;
+        z-index: 2;
+        border-radius: 10px;
+        margin: auto;
+        width: 80%; /* Ajustar el ancho del menú desplegable directamente */
+        padding: 20px; /* Ajustar el padding para mayor espacio interno */
+    }
+    
+    .navbar {
+        width: 90%; /* Ajustar el ancho del menú principal */
+        margin: auto; /* Centrar el menú */
+    }
+    
+    .navbar-nav {
+        list-style: none;
+        width: 100%;
+        margin: 0;
+    }
+    
+    .navbar-nav a {
+        text-decoration: none;
+        color: #265073;
+        display: block;
+        margin: 10px 0;
+        white-space: nowrap;
+    }
+    
+    .navbar-nav a:hover {
+        color: #7895CB;
+    }
+    
+    .navbar-collapse.show a {
+        font-size: 75%;
+    }
+
+    .navbar-toggler {
+        margin-left: auto; /* Añadir margen izquierdo automático al botón del menú hamburguesa */
+    }
+}
+
+.container-fluid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna */
+    grid-gap: 20px; /* Espacio entre las filas */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding: 20px; /* Agregar un espacio de relleno */
+}
+
+.conoce-mas {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna */
+    grid-gap: 20px; /* Espacio entre los elementos */
+}
+
+.texto {
+    text-align: justify; /* Justificar el texto */
+}
+
