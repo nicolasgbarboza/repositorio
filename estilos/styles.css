@@ -42,8 +42,8 @@ body {
 
 .logo{
     border-radius: 5% 5% 5% 5%;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 150%;
+    max-height: 150%;
 }
 
 /* composición del menú en todos los html*/
@@ -81,6 +81,28 @@ main{
 
 main h1 {
     text-align: center;
+}
+
+
+/* html conoce más */
+
+.container-fluid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-gap: 20px; 
+    justify-content: center;
+    align-items: center; 
+    padding: 20px;
+}
+
+.conoce-mas {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px; 
+}
+
+.texto {
+    text-align: justify; 
 }
 
 /* Galería de productos*/
@@ -143,8 +165,8 @@ main .galeria-img .producto .boton{
 }
 
 
-/* contenedor form contactos 
-voy a hacer un nuevo contenedor para */
+/* debo modificar el contenedor form-contactos 
+voy a hacer uno nuevo  */
 
 
 
@@ -175,12 +197,8 @@ img{
 
 /* mQ */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
 
-    .fondo {
-        background-image: url('../img/mini-bg.webp');
-    }
-    
     .container-fluid {
         padding: 10px;
     }
@@ -199,7 +217,7 @@ img{
     .galeria-img {
         display: flex;
         flex-direction: column;
-        align-items: stretch; /* Ajusta el ancho de los elementos a la anchura del contenedor principal */
+        align-items: stretch;
     }
 
     .navbar-toggler {
@@ -224,13 +242,13 @@ img{
         z-index: 2;
         border-radius: 10px;
         margin: auto;
-        width: 80%; /* Ajustar el ancho del menú desplegable directamente */
-        padding: 20px; /* Ajustar el padding para mayor espacio interno */
+        width: 80%;
+        padding: 20px;
     }
     
     .navbar {
-        width: 90%; /* Ajustar el ancho del menú principal */
-        margin: auto; /* Centrar el menú */
+        width: 90%; 
+        margin: auto; 
     }
     
     .navbar-nav {
@@ -256,26 +274,65 @@ img{
     }
 
     .navbar-toggler {
-        margin-left: auto; /* Añadir margen izquierdo automático al botón del menú hamburguesa */
+        margin-left: auto; 
     }
 }
 
-.container-fluid {
-    display: grid;
-    grid-template-columns: 1fr; /* Una columna */
-    grid-gap: 20px; /* Espacio entre las filas */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    padding: 20px; /* Agregar un espacio de relleno */
-}
 
-.conoce-mas {
-    display: grid;
-    grid-template-columns: 1fr; /* Una columna */
-    grid-gap: 20px; /* Espacio entre los elementos */
-}
 
-.texto {
-    text-align: justify; /* Justificar el texto */
-}
+@media screen and (min-width: 768px) {
+    
+    /* Reduzco la altura del encabezado */
 
+    header {
+        height: 10vh; 
+    }
+
+    /* Ajustes para el menú de navegación */
+
+    .navbar-nav {
+        display: flex;
+        justify-content: flex-end; 
+    }
+
+    .navbar-nav li {
+        margin-left: 20px; 
+    }
+
+    .navbar-collapse {
+        display: flex ; 
+        flex-direction: row ; 
+        position: static ; 
+        width: auto ;
+        background-color: transparent ;
+        border: none ; 
+    }
+
+    .navbar-toggler {
+        display: none; 
+    }
+
+    /* Ajustes para el contenido principal */
+    main {
+        height: 80vh; 
+    }
+
+    .galeria-img {
+        flex-direction: row; 
+    }
+
+    .producto {
+        width: 300px; 
+        margin: 0 10px; 
+    }
+
+    .boton {
+        padding: 10px 20px; 
+    }
+
+    /* Ajustes para el pie de página */
+    footer {
+        height: 10vh; 
+        font-size: 20px;
+    }
+}
