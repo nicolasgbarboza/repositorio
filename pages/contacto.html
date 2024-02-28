@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contacto</title>
 <link rel="shortcut icon" href="/img/favicon.png.png">
-<link rel="stylesheet" href="../estilos/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../estilos/styles.css">
 
 </head>
 
@@ -15,25 +15,33 @@
 
 <!--Encabezado-->
 <header>
-  <div>
-        <img class="logo" src="../img/logo.png" alt="Logo" href="#">
-  </div>
-  <div>
-        <nav class="menu">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="./productos.html">Productos</a></li>
-        <li><a href="./conocemas.html">Conocé más el producto</a></li>
-        <li><a href="./ecopackaging.html">Ecopackaging</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
-      </ul>
-  </nav>
+<div>
+    <img class="logo" src="../img/logo.png" alt="Logo" href="#">
 </div>
-            </ul>
-        </div>
-        </div>
+
+<nav class="menu navbar navbar-expand-lg navbar-light ">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="./productos.html">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="./conocemas.html">Conocé más el producto</a></li>
+        <li class="nav-item"><a class="nav-link" href="./ecopackaging.html">Ecopackaging</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+      </ul>
     </div>
-  </div>
+  </button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="./productos.html">Productos</a></li>
+      <li class="nav-item"><a class="nav-link" href="./conocemas.html">Conocé más el producto</a></li>
+      <li class="nav-item"><a class="nav-link" href="./ecopackaging.html">Ecopackaging</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+    </ul>
+</div>
 </nav>
 
 </header>
@@ -41,39 +49,30 @@
 <!--Contenido principal-->
 
 <main>
-    <section class="container">
-      <div class="row">
+      <div class="contenedor">
 
-        <h1>Formulario de Contacto</h1>
-
-          <div class="col-6 caja">
-            <label for="nombre" class="form-label">Nombre:</label>
-
-            <input type="text" id="nombre" name="nombre" placeholder="Nombres" required>
+        <div class="columna-izquierda">
+        <h2>Contactanos</h2>
+          <p>¿Tenes alguna consulta o sugerencia para hacernos? ¡Nos encantaría recibir tu mensaje!</p>
+        </div>  
+        <div class="columna-derecha">
+            <h3>Formulario de contacto</h3>
+              <form action="#" method="POST" class="formulario-contacto">
+              <label for="nombre-apellido">Nombre y Apellido:</label>
+              <input type="text" id="nombre-apellido" name="nombre-apellido" placeholder="Nombre y Apellido" required>
+              
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+              <label for="telefono">Teléfono (Opcional):</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
+                  
+              <label for="mensaje">Mensaje (Opcional):</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Mensaje"></textarea>
+                  
+              <button type="submit">Enviar</button>
+              </form>
           </div>
-
-          <div class="col-6 caja">
-          
-              <label for="apellidos" class="form-label">Apellidos:</label>
-              <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
-          
-          </div>
-          <div class="col-6 caja">
-          
-            <label for="telefono" class="form-label">Número de teléfono:</label>
-            <input type="telefono" id="telefono" name="telefono" placeholder="N° de teléfono" required>
-        </div>
-
-        <div class="col-6 caja">
-
-          <label for="Mensaje" class="form-label">Mensaje (opcional):</label>
-          <textarea class="form-control" id="Mensaje" rows="12"></textarea>
-
-          <button type="submit">Enviar</button>
-        </div>
-
       </div>
-    </section>
 </main>
 
 <!--Pie de página--> 

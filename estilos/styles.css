@@ -1,338 +1,635 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
 
-/* font-family: 'Roboto Slab', serif; */
-/* reseteo */
+    /* reseteo */
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Slab', serif;
-    box-sizing: border-box;
-}
-
-
-/* Composición del header en todos los html */
-header{
-    display: flex;
-    justify-content: space-between;
-    background-color: #ECF4D6;
-    padding: 20px;  
-    font-size: 26px;
-    font-weight: bolder;
-    height: 15vh;
-    
-}
-
-
-header nav ul{
-    list-style: none;
-    gap: 5px;
-}
-
-/* body */
-
-
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-/* logo */
-
-.logo{
-    border-radius: 5% 5% 5% 5%;
-    max-width: 150%;
-    max-height: 150%;
-}
-
-/* composición del menú en todos los html*/
-
-
-.menu ul li{
-    display: inline-block;
-    text-indent: 10px;
-    margin-top: 15px;    
-    margin-right: 20px;
-
-}
-
-.menu a{
-    text-decoration: none;
-    color: #265073;
-}
-
-.menu a:hover{
-    color: #7895CB;
-}
-
-/* composición del main en todos los html */
-
-main{    
-    display: grid;
-    height: 70vh;
-    opacity: .95;
-    background-size: cover;
-    background-position-x: 30%;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    background-color: #9AD0C2;
-}
-
-main h1 {
-    text-align: center;
-}
-
-
-/* html conoce más */
-
-.container-fluid {
-    display: grid;
-    grid-template-columns: 1fr; 
-    grid-gap: 20px; 
-    justify-content: center;
-    align-items: center; 
-    padding: 20px;
-}
-
-.conoce-mas {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px; 
-}
-
-.texto {
-    text-align: justify; 
-}
-
-/* Galería de productos*/
-
-main .galeria-img{
-
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-
-}
-
-/* Descripción de productos*/
-
-main .texto-cards{
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 25px;
-}
-
-main .texto-cards p{
-
-    font-size: 20;
-    text-align: center;
-
-}
-
-/* Divisor para limitar el ancho del texto  */
-
-main .texto-cards div{
-
-    width: 200px;
-
-}
-
-/* cards y divisores */
-
-main .galeria-img .producto{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #265073;
-    padding: 10px;
-    margin-top: 20px;
-    box-shadow: 3px 3px 3px grey;
-    color: whitesmoke;
-    margin-bottom: 30px;
-}
-
-
-main .galeria-img .producto .boton{
-    background-color: whitesmoke;
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-    box-shadow: 3px 5px 5px black;
-    color: black;
-}
-
-
-/* debo modificar el contenedor form-contactos 
-voy a hacer uno nuevo  */
-
-
-
-/* pie de pagina en todos los html */
-
-footer {
-    height: 15vh;
-    color: #FFFF;
-    font-size: 25px;
-    background-color: #265073;
-    text-align: center;
-}
-
-/* estilos de main, debo unificarlos*/
-
-
-div .fondo{
-    width: 100%;
-    height: 70vh;
-}
-
-img{
-    width: 100%;
-    height: 30vh;
-    object-fit: center;
-}
-
-
-/* mQ */
-
-@media screen and (max-width: 767px){
-
-    .container-fluid {
-        padding: 10px;
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto Slab', serif;
+        box-sizing: border-box;
     }
 
-    .galeria-img {
-        flex-direction: column;
+    /* Composición del header en todos los html */
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        background-color: #ECF4D6;
+        padding: 20px;  
+        font-size: 26px;
+        font-weight: bolder;
+        height: 15vh;    
     }
-    main.container-fluid {
-        padding-right: 50px;
-        padding-left: 50px;
+
+
+    header nav ul{
+        list-style: none;
+        gap: 5px;
     }
-    main {
+
+    /* body */
+
+
+    body {
+        margin: 0;
+        padding: 0;
         height: 100%;
     }
-    
-    .galeria-img {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
+
+    /* logo */
+
+    .logo{
+        border-radius: 5px;
+        max-width: 200%;
+        max-height: 150%;
     }
 
-    .navbar-toggler {
-        display: block;
-        z-index: 1;
+    /* composición del menú en todos los html*/
+
+
+    .menu ul li{
+        display: inline-block;
+        text-indent: 10px;
+        margin-top: 15px;    
+        margin-right: 20px;
+
     }
-    
-    .navbar-collapse {
-        display: none;
-    }
-    
-    .navbar-collapse.show {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        font-size: 75%;
-        position: absolute;
-        top: 15vh;
-        left: 0;
-        right: 0;
-        background-color: #ECF4D6;
-        z-index: 2;
-        border-radius: 10px;
-        margin: auto;
-        width: 80%;
-        padding: 20px;
-    }
-    
-    .navbar {
-        width: 90%; 
-        margin: auto; 
-    }
-    
-    .navbar-nav {
-        list-style: none;
-        width: 100%;
-        margin: 0;
-    }
-    
-    .navbar-nav a {
+
+    .menu a{
         text-decoration: none;
         color: #265073;
-        display: block;
-        margin: 10px 0;
-        white-space: nowrap;
     }
-    
-    .navbar-nav a:hover {
+
+    .menu a:hover{
         color: #7895CB;
     }
-    
-    .navbar-collapse.show a {
-        font-size: 75%;
-    }
 
-    .navbar-toggler {
-        margin-left: auto; 
-    }
-}
+    /* composición del main en todos los html */
 
-
-
-@media screen and (min-width: 768px) {
-    
-    /* Reduzco la altura del encabezado */
-
-    header {
-        height: 10vh; 
-    }
-
-    /* Ajustes para el menú de navegación */
-
-    .navbar-nav {
+    main{    
         display: flex;
-        justify-content: flex-end; 
+        justify-content: center;
+        overflow: hidden;
+        height: 70vh;
+        opacity: .95;
+        background-size: cover;
+        background-position-x: 30%;
+        background-color: #9AD0C2;
     }
 
-    .navbar-nav li {
-        margin-left: 20px; 
+    main h1 {
+        text-align: center;
     }
 
-    .navbar-collapse {
-        display: flex ; 
-        flex-direction: row ; 
-        position: static ; 
-        width: auto ;
-        background-color: transparent ;
-        border: none ; 
+
+    .fondo img{
+        width: 100%;
+        object-fit: center;
+
     }
 
-    .navbar-toggler {
-        display: none; 
+
+    /* contenedor de "conoce más" */
+
+    .contenedor-columna{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        max-width: 1200px;
+        gap: 5px;
+        background-color: #265073;
     }
 
-    /* Ajustes para el contenido principal */
-    main {
-        height: 80vh; 
+    .contenedor-columna h1,
+    .contenedor-columna h2,
+    .contenedor-columna p {
+        text-align: center;
+        color: whitesmoke;
     }
 
-    .galeria-img {
-        flex-direction: row; 
+    .contenedor-columna img{
+        width: 300px;
+        height: 200px;
+        border-radius: 5px;
     }
 
-    .producto {
-        width: 300px; 
-        margin: 0 10px; 
+
+
+    /* Galería de productos*/
+
+    main .galeria-img{
+        display: flex;
+        justify-content: center;
+        gap: 25px;
     }
 
-    .boton {
-        padding: 10px 20px; 
+    .producto.custom-margin{
+        max-width: 250px;
+        margin: 0 auto;
+        border-radius: 5px;
     }
 
-    /* Ajustes para el pie de página */
+    /* imagenes de productos */
+
+    .producto img{
+        object-fit: center;
+        width: 100%;
+    }
+
+    /* Descripción de productos*/
+
+    main .texto-cards{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    main .texto-cards p{
+        font-size: 20;
+        text-align: center;
+    }
+
+    /* Divisor para limitar el ancho del texto  */
+
+    main .texto-cards div{
+        width: 200px;
+    }
+
+    /* h1 en whiteskmoke */
+
+    .row h1{
+        color: whitesmoke;
+    }
+
+    /* cards y divisores */
+
+    main .galeria-img .producto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #7895CB;
+        padding: 5px;
+        margin-top: 0px;
+        box-shadow: 3px 3px 3px grey;
+        color: whitesmoke;
+        margin-bottom: 30px;
+    }
+
+
+    main .galeria-img .producto .boton{
+        background-color: whitesmoke;
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        box-shadow: 3px 5px 5px black;
+        color: black;
+    }
+
+
+
+    /* Contenedor */
+
+    .contenedor{
+        max-width: 1200px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 50px;
+        background-color: #265073;
+    }
+
+    /* orden para la columna izquierda de "ecopackaging */
+
+    .columna-izquierda img{
+        width: 100px;
+        height: 100px;
+        opacity: .6;
+        margin-top: 80px;
+        margin-bottom: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+    }
+
+    .columna-izquierda h2,
+    .columna-izquierda p{
+        color: whitesmoke;
+    }
+
+    /* orden para la columna derecha de "ecopackaging */
+
+    .columna-derecha img{
+        width: 92%;
+        object-fit: center;
+    }
+
+
+    /* columnas para "Contacto" */
+
+    .columna-izquierda h2,
+    .columna-derecha h2 {
+        margin-bottom: 10px;
+    }
+
+    .columna-derecha h3,
+    .columna-derecha form{
+        color: whitesmoke;
+    }
+
+    /* Formulario de contacto */
+
+    .formulario-contacto label,
+    .formulario-contacto textarea,
+    .formulario-contacto input,
+    .formulario-contacto button{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .formulario-contacto input,
+    .formulario-contacto textarea{
+        padding: 8px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        width: calc(100% - 20px);
+
+    }
+
+    .formulario-contacto button{
+        background-color: #7895CB;
+        color: black;
+        border: none;
+        padding: 14px 25px;
+        cursor: pointer;
+    }
+
+
+    /* pie de pagina en todos los html */
+
     footer {
-        height: 10vh; 
+        height: 15vh;
+        color: #FFFF;
         font-size: 20px;
+        background-color: #265073;
+        text-align: center;
     }
-}
+
+
+
+    /* mQ */
+
+    @media screen and (max-width: 768px){
+
+        /* oculto el fondo del home en mobile*/
+
+        .fondo{
+            display: none;
+        }
+
+        /* ordeno el h1 y la foto oculta para desktop */
+
+        main {
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1{
+            text-align: center;
+        }
+        main h1{
+            color: whitesmoke;
+        }
+        .piedra-oculta{
+            margin-top: 20px;
+            width: 80%;
+            max-width: 300px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            opacity: .7;
+            text-align: center;
+        }
+
+
+        /* contenedor visible en mobile */
+
+        .contenedor-oculto {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            width: 100%;
+            background-color: #265073;
+        }
+
+/* galeria de productos mobile */
+
+        .container-fluid {
+            padding: 10px;
+        }
+
+        .galeria-img {
+            flex-direction: column;
+        }
+        main.container-fluid {
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+        
+        .galeria-img {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+/* menu hamburguesa mobile */
+
+        .navbar-toggler {
+            display: block;
+            z-index: 1;
+        }
+        
+        .navbar-collapse {
+            display: none;
+        }
+        
+        .navbar-collapse.show {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 75%;
+            position: absolute;
+            top: 15vh;
+            left: 0;
+            right: 0;
+            background-color: #ECF4D6;
+            z-index: 2;
+            border-radius: 10px;
+            margin: auto;
+            width: 80%;
+            padding: 20px;
+        }
+        
+        .navbar {
+            width: 90%; 
+            margin: auto; 
+        }
+        
+        .navbar-nav {
+            list-style: none;
+            width: 100%;
+            margin: 0;
+        }
+        
+        .navbar-nav a {
+            text-decoration: none;
+            color: #265073;
+            display: block;
+            margin: 10px 0;
+            white-space: nowrap;
+        }
+        
+        .navbar-nav a:hover {
+            color: #7895CB;
+        }
+        
+        .navbar-collapse.show a {
+            font-size: 75%;
+        }
+
+        .navbar-toggler {
+            margin-left: auto; 
+        }
+
+/* orden de columnas mobile */
+        .columna-izquierda{
+            width: 100%;
+            order: 1;
+            margin-bottom: 20px;
+        }
+
+        .columna-derecha{
+            width: 100%;
+            order: 2;
+        }
+
+
+
+    }
+
+
+
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        
+        /* oculto el fondo en tablet */
+        .fondo{
+            display: none;
+        }
+
+         /* ordeno el h1 y la foto oculta para desktop */
+
+        main {
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1{
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        main h1{
+            color: whitesmoke;
+        }
+
+
+        .piedra-oculta{
+            width: 80%;
+            max-width: 300px;
+            margin-top: 20px ;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            text-align: center;
+            opacity: .7;
+        } 
+
+        .piedra-oculta img {
+            width: 100%;
+            height: auto; 
+            display: block;
+        }
+
+        /* contenedor visible en tablets */
+
+        .contenedor-oculto{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            width: 100%;
+            background-color: #265073;
+        }
+
+        /* menu hamburguesa tablet */
+
+        .navbar-collapse {
+            display: none; 
+        }
+
+        .navbar-toggler{
+            display: block;
+            z-index: 1;
+        }
+
+        .navbar-nav{
+            flex-direction: column;
+            background-color: #ECF4D6;
+            padding: 20px;
+        }
+
+        .navbar-collapse.show {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 75%;
+            position: absolute;
+            top: 25vh;
+            left: 0;
+            right: 0;
+            background-color: #ECF4D6;
+            z-index: 2;
+            border-radius: 10px;
+            margin: auto;
+            width: 80%;
+            padding: 20px;
+        }
+
+        
+        .navbar {
+            width: 90%; 
+            margin: auto; 
+        }
+
+        .navbar-collapse{
+            display: none;
+        }
+
+        .navbar-nav {
+            list-style: none;
+            width: 100%;
+            margin: 0;
+        }
+        
+        .navbar-nav a {
+            text-decoration: none;
+            color: #265073;
+            display: block;
+            margin: 10px 0;
+            white-space: nowrap;
+        }
+        
+        .navbar-nav a:hover {
+            color: #7895CB;
+        }
+        
+        .navbar-collapse.show a {
+            font-size: 75%;
+        }
+
+        .navbar-toggler {
+            margin-left: auto; 
+        }
+
+
+    }
+
+
+    @media screen and (min-width: 992px) {
+        body {
+            overflow-y: hidden;
+        }
+        /* oculto el h1 en desktop */
+        h1{
+            display: none;
+        }
+        /* oculto la pila de bentonita en desktop */
+        
+        .piedra-oculta{
+            display: none;
+        }
+
+
+        /* Reduzco la altura del encabezado */
+
+        header {
+            height: 10vh; 
+        }
+
+        /* Ajustes para el menú de navegación */
+
+        .navbar-nav {
+            display: flex;
+        }
+
+        .navbar-nav li {
+            margin-left: 20px; 
+        }
+
+        .navbar-collapse {
+            display: flex ; 
+            justify-content: flex-end;
+        }
+
+        .navbar-toggler {
+            display: none; 
+        }
+
+        /* Ajustes para el contenido principal */
+
+        main {
+            height: 80vh; 
+        }
+
+        .galeria-img {
+            flex-direction: row; 
+        }
+
+        .producto {
+            width: 300px; 
+            margin: 0 10px; 
+        }
+
+        .boton {
+            padding: 10px 20px; 
+        }
+
+        /* Ajustes para el pie de página */
+        footer {
+            height: 10vh;
+        }
+
+        .contenedor{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .columna-izquierda{
+            width: 50%;
+            margin-right: 20px;
+        }
+
+        .columna-derecha{
+            width: 50%;
+        }
+
+    }
